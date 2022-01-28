@@ -1,3 +1,7 @@
+//
+// Created by alliang on 1/25/2022.
+//
+
 
 #ifndef CHEMCALC_OPERATOR_H
 #define CHEMCALC_OPERATOR_H
@@ -6,7 +10,7 @@
 
 class Operator {
 public:
-    Operator(std::string name, int (*tIntOperation)(int));
+    Operator(std::string name, int (*tIntOperation)(int []));
     std::string Name;
     Operator* InOperator;
     Operator* OutOperator;
@@ -14,7 +18,7 @@ public:
     std::string OutUnit;
     int input;
     int output;
-    void performOperation(int input);
+    void performOperation(int input []);
 
 
 
